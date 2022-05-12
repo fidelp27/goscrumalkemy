@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import {  Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import {
+  AnimatePresence, motion
+} from 'framer-motion';
+  import {lazy, Suspense} from "react"
 import './App.css';
+import Login from './components/views/login/login';
+import Task from './components/views/task/task';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Error404 = lazy(()=> import("./components/views/error404/error404"))
+
+export const RequiredAuth = ({children}) => {
+  if (!localStorage.getItem('logged')) {
+    return <Navigate to="/login" replace={true} />
+  } else {
+    return children
+  }
 }
 
-export default App;
+const pageTransition= {
+  in: {
+    opacity: 1
+  },
+  out: {
+    opacity: 0
+  }
+}
+
+export function App() {
+  const location = useLocation()
+  return (
+    <>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path='/' element={
+            <RequiredAuth>
+              <motion.div className='page' initial="out" animate="in" exit="out"variants={pageTransition}><Task /></motion.div>
+            </RequiredAuth>} />
+          <Route path='/login' element= { <motion.div className='page' initial="out" animate="in" exit="out"variants={pageTransition}> <Login /> </motion.div>} />
+          <Route path='*' element={
+            <motion.div className='page' initial="out" animate="in" exit="out" variants={pageTransition}>
+              <Suspense fallback={<>...</>}>
+                <Error404 />
+              </Suspense>
+          </motion.div>} />
+        
+        </Routes>
+          </AnimatePresence>
+    </>
+  );      
+}
+
