@@ -1,7 +1,9 @@
 #task{
     padding: 20px 15px 5px;
 }
-
+#task h2{
+    margin: 0;
+}
 #task .wrapper_list {
     background-color: #fafafa;
     border-radius: var(--global-border-radius);

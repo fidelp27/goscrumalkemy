@@ -4,6 +4,7 @@ import "./task.css";
 import { useResize } from "../../../hooks/useResize";
 import { Card } from "../../card/card";
 import { CardData } from "./data";
+import TaskForm from "../../taskForm/taskForm";
 
 const Task = () => {
   const { isPhone } = useResize();
@@ -24,6 +25,7 @@ const Task = () => {
     <>
       <Header />
       <main id="task">
+        <TaskForm />
         <section className="wrapper_list">
           <div className="list_header">
             <h2>Mis tareas</h2>

@@ -19,7 +19,14 @@
     flex-direction: column;
     padding: 5px 0;
 }
-
+.auth > form > div > span {
+    font-size: 13px;
+    color: darkslategray;
+}
+.auth > form > div > span > a{
+    text-decoration: none;
+    color: brown;
+}
 .auth >form > div > *:not(label){
     padding: 8px 0;
 }
@@ -27,10 +34,13 @@
     color: var(--global-primary-color);
     font-size: 15px;
 }
-.auth  input{
+.auth  input,
+.auth select{
     border-radius: var(--global-radius);
     border: var(--global-border);
 }
+
+
 .auth button{
     transition: all 0.3s ease-out;
     background-color: var(--global-primary-color);
@@ -39,6 +49,11 @@
     color: white;
     padding: 15px;
     font-size: 16px;
+}
+.auth form div input.error,
+.auth select.error,
+.auth textarea.error{    
+    border: 1px solid rgb(122, 6, 6);
 }
 
 .auth button:hover{

@@ -6,7 +6,7 @@ const Header = () => {
   let navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("logged");
+    localStorage.removeItem("token");
     navigate("/", { replace: true });
   };
 
