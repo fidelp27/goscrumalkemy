@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import "../auth.css";
+import swal from "../../../../utils/swal";
 
 const { REACT_APP_API_ENDPOINT } = process.env;
 
@@ -35,8 +36,13 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        navigate("/", { replace: true });
-        localStorage.setItem("token", data.result.token);
+        if (data.status_code === 200) {
+          localStorage.setItem("token", data?.result?.token);
+          localStorage.setItem("user", data?.result?.user.userName);
+          navigate("/", { replace: true });
+        } else {
+          swal();
+        }
       });
   };
 

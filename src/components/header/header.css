@@ -10,3 +10,21 @@ header > img{
 header > div{
     cursor: pointer;
 }
+.wrapper_right_header{
+    display: flex;
+    flex-direction: row;    
+}
+.wrapper_right_header div{
+    padding-right: 2rem;
+}
+.donate_button{
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: .3rem;
+    padding: .2rem;
+    cursor: pointer;
+}
+.donate_button:hover{
+    background-color: rgba(165, 42, 42, 0.899);
+}

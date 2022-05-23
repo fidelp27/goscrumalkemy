@@ -72,6 +72,30 @@
     border-color: var(--global-primary-color);
     color: white;
 }
+
+#task .card button.finished{
+    background-color: #1ec876;
+    border-color: #1ec876
+}
+#task .card button.finished:hover{
+    background-color: white;
+    color: #1ec876
+}
+#task .card button.low{
+    background-color: #007bff;
+    border-color: #007bff;
+}
+#task .card button.low:hover{
+    background-color: white;
+    color: #007bff;
+}
+#task .card button.medium,
+#task .card button.progress{
+    background-color: #fbde3f;
+    border-color: #fbde3f;
+    color: black
+}
+
 #task .card p{
     color: #424242;
     display: block;

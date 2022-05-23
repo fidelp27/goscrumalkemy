@@ -6,6 +6,7 @@ import Login from "./components/views/auth/login/login";
 import Task from "./components/views/task/task";
 import Register from "./components/views/auth/register/register";
 import Registered from "./components/views/registered/registered";
+import Donate from "./components/views/donate/donate";
 
 const Error404 = lazy(() => import("./components/views/error404/error404"));
 
@@ -93,6 +94,22 @@ export function App() {
               </motion.div>
             }
           />
+          <Route
+            path="/donate"
+            element={
+              <motion.div
+                className="page"
+                initial="out"
+                animate="in"
+                exit="out"
+                variants={pageTransition}
+              >
+                {" "}
+                <Donate />{" "}
+              </motion.div>
+            }
+          />
+
           <Route
             path="*"
             element={
