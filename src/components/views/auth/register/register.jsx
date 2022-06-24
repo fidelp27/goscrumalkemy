@@ -11,12 +11,14 @@ const { REACT_APP_API_ENDPOINT } = process.env;
 
 const Register = () => {
   const [data, setData] = useState();
-  const url = `${REACT_APP_API_ENDPOINT}auth/data`;
   const navigate = useNavigate();
-
+  console.log(data);
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
+    fetch(`{REACT_APP_API_ENDPOINT}auth/data`)
+      .then((response) => {
+        console.log(response);
+        response.json();
+      })
       .then((data) => setData(data.result));
   }, []);
 

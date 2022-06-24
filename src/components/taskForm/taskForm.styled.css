@@ -1,3 +1,27 @@
+.taskForm{
+    text-align: center;
+    margin: 0 auto;
+    padding: .5rem 0;
+}
+.taskForm form div input,
+.taskForm form div select,
+.taskForm form div textarea,
+.taskForm form button{
+    width: 95%;
+    border: .5px solid rgba(220, 211, 211, 0.453);
+    border-radius: .3rem;
+    padding: .4rem 0;
+    margin: .3rem 0;
+}
+.taskForm form button{
+    text-align: center; 
+    background-color: springgreen;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
 .taskForm input.error,
 .taskForm select.error,
 .taskForm textarea.error {
@@ -6,5 +30,26 @@
 .error-message{
     color: rgb(122, 6, 6);
     font-size: 12px;
+    text-align: left;
 
 }
+
+@media (min-width: 600px) {
+.taskForm form div input,
+.taskForm form div select,
+.taskForm form div textarea,
+.taskForm form button{
+    width: 60%; 
+}
+}
+@media (min-width: 768px) {
+    main#task .taskForm form{
+        width: 100%;
+    }
+    .taskForm form div input,
+    .taskForm form div select,
+    .taskForm form div textarea,
+    .taskForm form button{
+        width: 100%; 
+    }
+}  

@@ -33,7 +33,7 @@ const Task = () => {
   });
 
   useEffect(() => {
-    dispatch(getTasks(taskFromWho === "ME" ? "/me" : ""));
+    dispatch(getTasks(taskFromWho === "ME" ? "me" : ""));
   }, [taskFromWho, dispatch]);
 
   useEffect(() => {
@@ -46,7 +46,11 @@ const Task = () => {
   useEffect(() => {
     if (search) {
       // filtra el titulo que comience por el valor buscado "startsWith"
-      setRenderList(list.filter((data) => data.title.startsWith(search)));
+      setRenderList(
+        list.filter((data) =>
+          data.title.toLowerCase().startsWith(search.toLowerCase())
+        )
+      );
     } else {
       setRenderList(list);
     }
@@ -62,7 +66,6 @@ const Task = () => {
       />
     ));
   };
-
   const renderColumnCards = (text) => {
     return renderList
       ?.filter((data) => data.status === text)
@@ -75,6 +78,7 @@ const Task = () => {
         />
       ));
   };
+  renderColumnCards();
 
   const handleChangeImportance = (event) => {
     if (event.currentTarget.value === "ALL" || event.currentTarget.value === "")
@@ -141,7 +145,7 @@ const Task = () => {
             </select>
           </div>
           {isPhone ? (
-            !renderList?.length ? (
+            !tasks.length ? (
               <div>No hay tareas creadas</div>
             ) : loading ? (
               <Skeleton />
@@ -150,7 +154,7 @@ const Task = () => {
             )
           ) : (
             <div className="list_group">
-              {!renderList?.length ? (
+              {!tasks.length ? (
                 <div>No hay tareas creadas</div>
               ) : loading ? (
                 <Skeleton height={90} />

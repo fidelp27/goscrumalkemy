@@ -18,8 +18,8 @@ export const Card = ({
   const datetime = new Date(createdAt).toLocaleString() + " hs.";
 
   const limitString = (str) => {
-    if (str.length > 170) {
-      return { string: str.slice(0, 167).concat("..."), addButton: true };
+    if (str.length > 80) {
+      return { string: str.slice(0, 77).concat("..."), addButton: true };
     } else {
       return { string: str, addButton: false };
     }

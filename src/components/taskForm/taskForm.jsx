@@ -4,10 +4,11 @@ import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./taskForm.styled.css";
-
-const { REACT_APP_API_ENDPOINT } = process.env;
+import { addTask } from "../../store/actions/taskActions";
+import { useDispatch } from "react-redux";
 
 const TaskForm = () => {
+  const dispatch = useDispatch();
   const initialValues = {
     title: "",
     status: "",
@@ -27,29 +28,17 @@ const TaskForm = () => {
   });
 
   const onSubmit = () => {
-    fetch(`${REACT_APP_API_ENDPOINT}task`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + localStorage.getItem("token"),
-      },
-      body: JSON.stringify({
-        task: values,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        resetForm();
-        toast.success("🦄 Tarea creada", {
-          position: "top-center",
-          autoClose: 4000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      });
+    dispatch(addTask(values));
+    resetForm();
+    toast.success("🦄 Tarea creada", {
+      position: "top-center",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   const formik = useFormik({

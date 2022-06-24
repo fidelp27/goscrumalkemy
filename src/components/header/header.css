@@ -1,21 +1,30 @@
 header{
-    box-shadow: 0 px 5px #dbdbdb;
     display: flex;
     justify-content: space-between;
-    padding: 12px 15px;
+    align-items: center;
+    box-shadow: 0 px 5px #dbdbdb9b;
+    padding: 1rem .5rem;
 }
-header > img{
-    width: 90px;
+header > span{
+    width: 100px;
+    padding: 0 .5rem
 }
+header div.tasks_number{
+    display: none
+}
+
 header > div{
     cursor: pointer;
 }
-.wrapper_right_header{
+
+header .wrapper_right_header{
+    width: 65%;
     display: flex;
-    flex-direction: row;    
+    justify-content: space-around;
+    align-items: center;
 }
-.wrapper_right_header div{
-    padding-right: 2rem;
+header .user{
+    font-size: .8rem
 }
 .donate_button{
     background-color: brown;
@@ -27,4 +36,15 @@ header > div{
 }
 .donate_button:hover{
     background-color: rgba(165, 42, 42, 0.899);
+}
+
+@media (min-width: 600px) {
+    header div.tasks_number{
+        display: flex;
+        font-size: .8rem
+    }
+    header .wrapper_right_header{
+        width: 80%;
+        
+    }
 }

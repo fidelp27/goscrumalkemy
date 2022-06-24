@@ -5,13 +5,14 @@ const initialState = {
   tasks: [],
   error: "",
 };
+
 export const tasksReducer = (state = initialState, action) => {
   switch (action.type) {
     case TASKS_REQUEST: {
       return {
         ...state,
         loading: true,
-        error: "rr",
+        error: "",
       };
     }
     case TASKS_SUCCESS: {

@@ -20,7 +20,7 @@ const Header = () => {
     <header>
       <span>Go Scrum</span>
       <div className="wrapper_right_header">
-        <div>
+        <div className="donate_box">
           <button
             className="donate_button"
             onClick={() => navigate("/donate", { replace: true })}
@@ -28,8 +28,8 @@ const Header = () => {
             Donar
           </button>
         </div>
-        <div className="black">Tareas creadas: {tasks.length} </div>
-        <div className="black">{localStorage.getItem("user")} </div>
+        <div className="tasks_number">Tareas creadas: {tasks?.length} </div>
+        <div className="user">{localStorage.getItem("user")} </div>
         <div onClick={handleLogout}>x</div>
       </div>
     </header>

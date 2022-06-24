@@ -1,39 +1,47 @@
-#task{
-    padding: 20px 15px 5px;
-}
+main#task{
+    display: block;
+  }
+
+  main#task .taskForm{
+    width: 95%;
+  }
+
 #task h2{
+    font-size: 1rem;
     margin: 0;
+    padding: .5rem;
 }
 #task .wrapper_list {
+    width: 95vw;
+    margin: 0 auto;
+    padding: .5rem 0;
     background-color: #fafafa;
     border-radius: var(--global-border-radius);
-    height: calc(100vh - 100px);
-    padding: 10px;
     box-shadow: 0 2px 5px #dbdbdb;
 }
+#task span{
+    font-size: .8rem;
+}
+#task .wrapper_list div h2,
+#task .wrapper_list div.filters {
+    width: 95%;
+    font-size: 1rem;
+    margin: .4rem;
+    text-align: center;
+}
+#task .wrapper_list div input,
+#task .wrapper_list div select {
+    width: 350px;
+    max-width: 70%;
+    border: .5px solid rgba(220, 211, 211, 0.453);
+    border-radius: .3rem;
+    padding: .4rem;
+    margin: .3rem 0;
+}
 
-#task .wrapper_list h2{
-    font-size: 1.2rem;
-    margin: 0;
-}
-#task .wrapper_list .list_group{
-    display: flex;
-    flex-direction: row;
-    gap: 5px 10px;
-}
-
-#task .wrapper_list .list_group .list{
-    flex: 1;
-    border-radius: var(--global-radius);
-    padding: 10px;
-    box-shadow: 0 2px 5px #dbdbdb;
-    background-color: white;
-}
-#task .wrapper_list .list_group .list h4{
-    font-size: 1.2rem;
-    margin: 0 0 5px;
-}
 #task .card{
+    width: 95%;
+    margin: .5rem auto;
     background-color: #fff;
     border: var(--global-border);
     border-radius: 12px;
@@ -101,5 +109,40 @@
     display: block;
     font-size: 0.8rem;
     margin: 0;
+    overflow-wrap: break-word;
 }
 
+@media (min-width: 600px) {
+    #task .card{
+        width: 75%;        
+    }
+}
+
+@media (min-width: 768px) {
+    main#task{
+        display: flex;        
+      }
+    
+      main#task .taskForm{
+        width: 25vw;
+      }
+
+      #task .wrapper_list {
+        width: 70vw;   
+        min-height: 90vh;         
+    }
+    
+    
+}
+@media (min-width: 990px) {
+    
+    #task .wrapper_list .list_group{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #task .card{
+        width: 210px;        
+    }
+    
+}
