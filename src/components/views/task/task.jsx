@@ -47,8 +47,8 @@ const Task = () => {
     if (search) {
       // filtra el titulo que comience por el valor buscado "startsWith"
       setRenderList(
-        list.filter((data) =>
-          data.title.toLowerCase().startsWith(search.toLowerCase())
+        list?.filter((data) =>
+          data?.title?.toLowerCase().startsWith(search.toLowerCase())
         )
       );
     } else {
