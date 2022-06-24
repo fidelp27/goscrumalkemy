@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoscrumalkemy=self.webpackChunkgoscrumalkemy||[]).push([[146],{8146:function(n,e,a){a.r(e),a.d(e,{default:function(){return r}});a(2791);var c=a(184);function r(){return(0,c.jsx)("div",{className:"container",children:"P\xe1gina no encontrada"})}}}]);
+//# sourceMappingURL=146.62b84e53.chunk.js.map
