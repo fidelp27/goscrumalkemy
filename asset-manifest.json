@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/goscrumalkemy/static/css/main.dcfc0321.css",
-    "main.js": "/goscrumalkemy/static/js/main.ecd8a065.js",
+    "main.css": "/goscrumalkemy/static/css/main.dd8f0a95.css",
+    "main.js": "/goscrumalkemy/static/js/main.6c347698.js",
     "static/js/146.62b84e53.chunk.js": "/goscrumalkemy/static/js/146.62b84e53.chunk.js",
     "static/js/787.742f20eb.chunk.js": "/goscrumalkemy/static/js/787.742f20eb.chunk.js",
     "index.html": "/goscrumalkemy/index.html",
-    "main.dcfc0321.css.map": "/goscrumalkemy/static/css/main.dcfc0321.css.map",
-    "main.ecd8a065.js.map": "/goscrumalkemy/static/js/main.ecd8a065.js.map",
+    "main.dd8f0a95.css.map": "/goscrumalkemy/static/css/main.dd8f0a95.css.map",
+    "main.6c347698.js.map": "/goscrumalkemy/static/js/main.6c347698.js.map",
     "146.62b84e53.chunk.js.map": "/goscrumalkemy/static/js/146.62b84e53.chunk.js.map",
     "787.742f20eb.chunk.js.map": "/goscrumalkemy/static/js/787.742f20eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcfc0321.css",
-    "static/js/main.ecd8a065.js"
+    "static/css/main.dd8f0a95.css",
+    "static/js/main.6c347698.js"
   ]
 }
