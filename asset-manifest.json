@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/goscrumalkemy/static/css/main.dd8f0a95.css",
-    "main.js": "/goscrumalkemy/static/js/main.6c347698.js",
+    "main.js": "/goscrumalkemy/static/js/main.f64b6da8.js",
     "static/js/146.62b84e53.chunk.js": "/goscrumalkemy/static/js/146.62b84e53.chunk.js",
     "static/js/787.742f20eb.chunk.js": "/goscrumalkemy/static/js/787.742f20eb.chunk.js",
     "index.html": "/goscrumalkemy/index.html",
     "main.dd8f0a95.css.map": "/goscrumalkemy/static/css/main.dd8f0a95.css.map",
-    "main.6c347698.js.map": "/goscrumalkemy/static/js/main.6c347698.js.map",
+    "main.f64b6da8.js.map": "/goscrumalkemy/static/js/main.f64b6da8.js.map",
     "146.62b84e53.chunk.js.map": "/goscrumalkemy/static/js/146.62b84e53.chunk.js.map",
     "787.742f20eb.chunk.js.map": "/goscrumalkemy/static/js/787.742f20eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd8f0a95.css",
-    "static/js/main.6c347698.js"
+    "static/js/main.f64b6da8.js"
   ]
 }
