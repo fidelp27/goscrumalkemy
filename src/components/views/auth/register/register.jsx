@@ -14,7 +14,7 @@ const Register = () => {
   const navigate = useNavigate();
   console.log(data);
   useEffect(() => {
-    fetch(`{REACT_APP_API_ENDPOINT}auth/data`)
+    fetch(`${REACT_APP_API_ENDPOINT}auth/data`)
       .then((response) => {
         console.log(response);
         response.json();
