@@ -15,10 +15,7 @@ const Register = () => {
   console.log(data);
   useEffect(() => {
     fetch(`${REACT_APP_API_ENDPOINT}auth/data`)
-      .then((response) => {
-        console.log(response);
-        response.json();
-      })
+      .then((response) => response.json())
       .then((data) => setData(data.result));
   }, []);
 
