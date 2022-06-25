@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Switch, FormControlLabel } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "../auth.css";
+import Swal from "sweetalert2";
 
 const { REACT_APP_API_ENDPOINT } = process.env;
 
@@ -68,9 +69,21 @@ const Register = () => {
       }),
     })
       .then((response) => response.json())
-      .then((data) =>
-        navigate("/registered/" + data?.result.user?.teamID, { replace: true })
-      );
+      .then((data) => {
+        if (data.status_code === 409) {
+          Swal.fire({
+            title: "Error!",
+            text: "El usuario ya existe",
+            width: "400px",
+            timer: "3000",
+            timerProgressBar: "true",
+          });
+        } else {
+          navigate("/registered/" + data?.result.user?.teamID, {
+            replace: true,
+          });
+        }
+      });
   };
 
   const formik = useFormik({ initialValues, validationSchema, onSubmit });

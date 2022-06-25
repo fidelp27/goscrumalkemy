@@ -13,7 +13,7 @@ const Registered = () => {
         <div className="container-share">
           <p>Comparte el ID con tu equipo: </p>
           <a
-            href={`mailto:@gmail.com?subject=Team ID&body= El ID de nuestro team es ${teamID}`}
+            href={`mailto:?subject=Team ID&body= El ID de nuestro team es ${teamID}`}
           >
             <img
               src="https://i.imgur.com/RL6XERO.png"
