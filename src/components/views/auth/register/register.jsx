@@ -12,7 +12,6 @@ const { REACT_APP_API_ENDPOINT } = process.env;
 const Register = () => {
   const [data, setData] = useState();
   const navigate = useNavigate();
-  console.log(data);
   useEffect(() => {
     fetch(`${REACT_APP_API_ENDPOINT}auth/data`)
       .then((response) => response.json())
